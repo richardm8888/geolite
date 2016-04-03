@@ -1,12 +1,12 @@
 <?php
-	$settings = require('../src/settings.php');
+	$settings = require(__DIR__ . '/../src/settings.php');
 	$settings = $settings['settings'];
 
 	$db = new mysqli($settings['db']['host'], $settings['db']['username'], $settings['db']['password'], $settings['db']['dbname']);
 
 	$db_url = "http://geolite.maxmind.com/download/geoip/database/GeoIPCountryCSV.zip";
 
-	$tmp_file = "tmp/GeoIPCountryCSV.zip";
+	$tmp_file = __DIR__ . "/tmp/GeoIPCountryCSV.zip";
 
 	$zip_file = fopen($tmp_file, "w");
 

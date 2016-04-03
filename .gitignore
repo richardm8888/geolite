@@ -1,3 +1,4 @@
 /vendor/
 /logs/*
+/scripts/tmp/*
 !/logs/README.md

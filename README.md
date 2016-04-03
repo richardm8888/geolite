@@ -1,12 +1,13 @@
 # GeoLite API
 
-This application utilises the GeoLite Country database to return the country of a supplier IP address.
+This application utilises the GeoLite Country database to return the country of a supplied IP address.
 
 ## Minimum Requirements
 
 * php 5.5
 * mysql 14.14
 * composer
+* curl
 
 ## Installation
 
@@ -21,8 +22,17 @@ If composer is installed locally inside the application folder, run the below
 	php composer.phar install
 
 * Ensure 'logs/' is web writeable
+* Ensure 'scripts/tmp' is web writeable
 * Run '/sql/install.sql' on your mysql database
 * Update '/src/settings.php' with your database connection details
 * There is a template apache vhost file in the vhost folder, copy this into your apache vhost configuration files.
 * Run scripts/update.php
 * Add the following to your system crontab '0 3 * * * php {APPLICATION_PATH}/scripts/update.php' to update your database on a daily basis.
+
+## Working Example
+
+http://geolist.moss-development.co.uk/locationByIP/[IP ADDRESS]
+
+E.g.
+
+http://geolist.moss-development.co.uk/locationByIP/90.221.55.209
