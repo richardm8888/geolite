@@ -1,7 +1,7 @@
 <?php
 // Routes
 
-$app->get('/locationByIP/[{ip}]', function ($request, $response, $args) 
+$app->get('/locationByIP[/{ip}]', function ($request, $response, $args) 
 {
     // Sample log message
     $this->logger->info("GeoLite '/' route");
