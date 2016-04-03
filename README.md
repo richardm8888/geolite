@@ -1,21 +1,28 @@
-# Slim Framework 3 Skeleton Application
+# GeoLite API
 
-Use this skeleton application to quickly setup and start working on a new Slim Framework 3 application. This application uses the latest Slim 3 with the PHP-View template renderer. It also uses the Monolog logger.
+This application utilises the GeoLite Country database to return the country of a supplier IP address.
 
-This skeleton application was built for Composer. This makes setting up a new Slim Framework application quick and easy.
+## Minimum Requirements
 
-## Install the Application
+* php 5.5
+* mysql 14.14
+* composer
 
-Run this command from the directory in which you want to install your new Slim Framework application.
+## Installation
 
-    php composer.phar create-project slim/slim-skeleton [my-app-name]
+In order to install the required libaries for this application, you will need to run composer.
 
-Replace `[my-app-name]` with the desired directory name for your new application. You'll want to:
+If composer is installed globally, run the below in the application folder
 
-* Point your virtual host document root to your new application's `public/` directory.
-* Ensure `logs/` is web writeable.
+	composer install
 
-That's it! Now go build something cool.
-=======
-# geolite
+If composer is installed locally inside the application folder, run the below
 
+	php composer.phar install
+
+* Ensure 'logs/' is web writeable
+* Run '/sql/install.sql' on your mysql database
+* Update '/src/settings.php' with your database connection details
+* There is a template apache vhost file in the vhost folder, copy this into your apache vhost configuration files.
+* Run scripts/update.php
+* Add the following to your system crontab '0 3 * * * php {APPLICATION_PATH}/scripts/update.php' to update your database on a daily basis.

@@ -10,6 +10,10 @@ if (PHP_SAPI == 'cli-server') {
 
 require __DIR__ . '/../vendor/autoload.php';
 
+// Require below custom classes
+require __DIR__ . '/../models/DB.php';
+require __DIR__ . '/../models/GeoIP.php';
+
 session_start();
 
 // Instantiate the app
