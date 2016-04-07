@@ -31,8 +31,8 @@ If composer is installed locally inside the application folder, run the below
 
 ## Working Example
 
-http://geolist.moss-development.co.uk/locationByIP/[IP ADDRESS]
+http://geolite.moss-development.co.uk/locationByIP/[IP ADDRESS]
 
 E.g.
 
-http://geolist.moss-development.co.uk/locationByIP/90.221.55.209
+http://geolite.moss-development.co.uk/locationByIP/90.221.55.209
